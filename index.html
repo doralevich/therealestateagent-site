@@ -99,11 +99,13 @@
     .btn-primary:hover { background: #991b1b; }
     .btn-primary-lg { display: inline-block; background: #D72B2B; color: #fff; padding: 1rem 2.5rem; border-radius: .25rem; font-weight: 600; font-size: 1.125rem; transition: background .15s; }
     .btn-primary-lg:hover { background: #991b1b; }
-    /* Secondary CTA - pairs with .btn-primary in the hero for the two-path
-       choice (build it now / talk to us first). */
+    /* Paired CTAs - buy it now, or talk to us first. The -lg variant matches
+       .btn-primary-lg so the two buttons line up in the larger sections. */
     .cta-pair { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
     .btn-secondary-on-dark { display: inline-block; background: transparent; color: #fff; padding: .75rem 2rem; border: 1px solid hsla(0,0%,100%,.5); border-radius: .25rem; font-weight: 600; font-size: 1rem; transition: background .15s, border-color .15s; }
     .btn-secondary-on-dark:hover { background: hsla(0,0%,100%,.1); border-color: #fff; }
+    .btn-secondary-on-dark-lg { display: inline-block; background: transparent; color: #fff; padding: 1rem 2.5rem; border: 1px solid hsla(0,0%,100%,.5); border-radius: .25rem; font-weight: 600; font-size: 1.125rem; transition: background .15s, border-color .15s; }
+    .btn-secondary-on-dark-lg:hover { background: hsla(0,0%,100%,.1); border-color: #fff; }
 
     .label-sm { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 600; color: #D72B2B; margin-bottom: 1rem; }
     .section-h2-dark { font-size: 1.875rem; font-weight: 700; color: #1a1a1a; line-height: 1.25; margin-bottom: 0; }
@@ -322,8 +324,12 @@
     <div class="section-inner" style="text-align:center;">
       <p class="label-sm">Investment</p>
       <h2 class="section-h2-light" style="margin-bottom:1.5rem;">Built for Agents Who Are Serious About Volume</h2>
-      <p class="investment-body">Every Real Estate Agent deployment is custom-scoped to your CRM, transaction volume, and team size. Pricing is discussed during your consultation.</p>
-      <a href="https://cal.com/therealdaveo/apollo-claw" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top:2.5rem;">Schedule Your Consultation</a>
+      <p class="investment-body">Two ways to start. Build your agent yourself in about fifteen minutes, or have us scope and configure it around your brokerage on a call.</p>
+      <div class="cta-pair" style="margin-top:2.5rem;">
+        <a href="https://www.apolloclaw.ai/build/real-estate" class="btn-primary-lg">Build Your Agent</a>
+        <a href="https://cal.com/therealdaveo/apollo-claw" target="_blank" rel="noopener noreferrer" class="btn-secondary-on-dark-lg">Schedule Your Consultation</a>
+      </div>
+      <p style="font-size:.875rem; color:#9ca3af; margin-top:1.5rem;">Custom deployments are scoped to your CRM, transaction volume, and team size, and priced during your consultation.</p>
     </div>
   </section>
 
@@ -378,7 +384,7 @@
                 <span class="faq-question">What does it cost?</span>
                 <span class="faq-icon">+</span>
               </button>
-              <div class="faq-answer">Every engagement is custom-scoped based on your transaction volume, CRM, and team size. Book a consultation and we will give you a precise number within 48 hours.</div>
+              <div class="faq-answer">There are two ways to start. You can build your agent yourself online and see the price before you pay anything. For a custom deployment scoped to your transaction volume, CRM, and team size, book a consultation and we will give you a precise number within 48 hours.</div>
             </div>
           </div>
         </div>
@@ -415,8 +421,11 @@
     <div class="section-inner">
       <p class="label-sm">Get Started</p>
       <h2 style="font-size:1.875rem; font-weight:700; margin-bottom:1.5rem; line-height:1.25; color:#fff;">Ready to Close More and Work Less?</h2>
-      <p style="font-size:1.125rem; color:#e5e7eb; margin-bottom:2.5rem; line-height:1.625;">Schedule a 30-minute consultation. We will show you exactly how The Real Estate Agent would be configured for your business.</p>
-      <a href="https://cal.com/therealdaveo/apollo-claw" target="_blank" rel="noopener noreferrer" class="btn-primary-lg">Schedule Your Consultation</a>
+      <p style="font-size:1.125rem; color:#e5e7eb; margin-bottom:2.5rem; line-height:1.625;">Build your agent now, or book a 30-minute consultation and we will show you exactly how The Real Estate Agent would be configured for your business.</p>
+      <div class="cta-pair">
+        <a href="https://www.apolloclaw.ai/build/real-estate" class="btn-primary-lg">Build Your Agent</a>
+        <a href="https://cal.com/therealdaveo/apollo-claw" target="_blank" rel="noopener noreferrer" class="btn-secondary-on-dark-lg">Schedule Your Consultation</a>
+      </div>
     </div>
   </section>
 
