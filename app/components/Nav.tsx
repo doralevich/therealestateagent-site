@@ -2,109 +2,90 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { BUILD_LINK, DEMO_LINK, NAV_LINKS, AUDIENCES } from "@/lib/site";
+import { BUILD_LINK, DEMO_LINK, NAV_LINKS, AUDIENCES, PARENT_SITE, SITE_NAME } from "@/lib/site";
 
-// The nav carries five links plus both CTAs, so everything scales with the viewport and
-// refuses to wrap. Below the md breakpoint only the Build button stays in the bar.
+// Wide header: a thin utility bar over a roomy main row. Wordmark left, mono uppercase
+// links centred, the build CTA right. The links are deliberately far apart and small -
+// the bar reads as chrome, and the one green button is the only thing competing for a
+// click.
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="flex items-center justify-between h-16 gap-4">
-          <Link href="/" className="flex items-center shrink-0" aria-label="The Real Estate Agent home">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/the-real-estate-agent-wordmark.svg"
-              alt="The Real Estate Agent"
-              className="w-[clamp(9rem,20vw,15rem)] max-h-12 h-auto"
-            />
-          </Link>
+    <header className="site-nav">
+      <div className="nav-topbar">
+        <div className="nav-topbar-inner">
+          <a href={`${PARENT_SITE}/dashboard`} className="nav-topbar-link">
+            My Dashboard
+          </a>
+        </div>
+      </div>
 
-          <nav className="hidden md:flex items-center gap-[clamp(0.75rem,1.6vw,1.75rem)]">
-            {NAV_LINKS.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                className="text-[clamp(0.72rem,1.05vw,0.875rem)] font-medium text-ink hover:text-brand transition whitespace-nowrap"
-              >
-                {l.label}
-              </Link>
-            ))}
-            <a
-              href={DEMO_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[clamp(0.72rem,1.05vw,0.875rem)] font-medium text-ink hover:text-brand transition whitespace-nowrap"
-            >
-              Schedule a Consultation
-            </a>
-            <a
-              href={BUILD_LINK}
-              className="shrink-0 bg-brand text-white px-[clamp(0.6rem,1.2vw,1.25rem)] py-2 rounded font-semibold text-[clamp(0.72rem,1.05vw,0.875rem)] hover:bg-brand-dark transition whitespace-nowrap"
-            >
-              Build Your Agent
-            </a>
-          </nav>
+      <div className="nav-main">
+        <Link href="/" aria-label={`${SITE_NAME} home`} className="nav-logo">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/the-real-estate-agent-wordmark.svg" alt={SITE_NAME} />
+        </Link>
 
-          <button
-            className="md:hidden p-2"
-            aria-label="Toggle menu"
-            aria-expanded={open}
-            onClick={() => setOpen((v) => !v)}
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              {open ? <path d="M6 6l12 12M6 18L18 6" /> : <path d="M3 6h18M3 12h18M3 18h18" />}
-            </svg>
-          </button>
+        <nav className="nav-links" aria-label="Main">
+          {NAV_LINKS.map((l) => (
+            <Link key={l.href} href={l.href} className="nav-link">
+              {l.label}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="nav-cta">
+          <a href={BUILD_LINK} className="btn-brand btn-sm">
+            Build My Agent
+          </a>
         </div>
 
-        {open && (
-          <div className="md:hidden border-t border-gray-100 py-4 flex flex-col gap-4">
-            {NAV_LINKS.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                className="text-sm font-medium text-ink"
-                onClick={() => setOpen(false)}
-              >
-                {l.label}
-              </Link>
-            ))}
-            <p className="text-xs uppercase tracking-widest text-gray-400 font-semibold pt-2">
-              Who It&apos;s For
-            </p>
-            {AUDIENCES.map((a) => (
-              <Link
-                key={a.slug}
-                href={`/${a.slug}`}
-                className="text-sm font-medium text-ink pl-3"
-                onClick={() => setOpen(false)}
-              >
-                {a.label}
-              </Link>
-            ))}
-            <a
-              href={BUILD_LINK}
-              className="bg-brand text-white px-5 py-2 rounded font-semibold text-sm text-center mt-2"
-              onClick={() => setOpen(false)}
-            >
-              Build Your Agent
-            </a>
-            <a
-              href={DEMO_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-gray-300 text-ink px-5 py-2 rounded font-semibold text-sm text-center"
-              onClick={() => setOpen(false)}
-            >
-              Schedule a Consultation
-            </a>
-          </div>
-        )}
+        <button
+          className="nav-hamburger"
+          onClick={() => setOpen((o) => !o)}
+          aria-label="Toggle menu"
+          aria-expanded={open}
+        >
+          <span className={open ? "ham ham-1-open" : "ham"} />
+          <span className={open ? "ham ham-2-open" : "ham"} />
+          <span className={open ? "ham ham-3-open" : "ham"} />
+        </button>
       </div>
+
+      {open && (
+        <div className="nav-drawer">
+          {NAV_LINKS.map((l) => (
+            <Link key={l.href} href={l.href} className="nav-drawer-link" onClick={() => setOpen(false)}>
+              {l.label}
+            </Link>
+          ))}
+          <div className="nav-drawer-group">Who It&apos;s For</div>
+          {AUDIENCES.map((a) => (
+            <Link
+              key={a.slug}
+              href={`/${a.slug}`}
+              className="nav-drawer-link nav-drawer-sub"
+              onClick={() => setOpen(false)}
+            >
+              {a.label}
+            </Link>
+          ))}
+          <a href={BUILD_LINK} className="btn-brand nav-drawer-cta" onClick={() => setOpen(false)}>
+            Build My Agent
+          </a>
+          <a
+            href={DEMO_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-ghost nav-drawer-cta"
+            onClick={() => setOpen(false)}
+          >
+            Schedule a Consultation
+          </a>
+        </div>
+      )}
     </header>
   );
 }

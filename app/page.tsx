@@ -3,6 +3,7 @@ import Nav from "./components/Nav";
 import { Footer } from "./components/Footer";
 import { Label } from "./components/PageHero";
 import { CtaPair, ClosingCta } from "./components/Cta";
+import { Hero } from "./components/Hero";
 import { FAQ } from "./components/FAQ";
 import { CAPABILITIES, PROCESS, TESTIMONIALS, FAQS } from "@/lib/content";
 import { AUDIENCES, SITE_URL } from "@/lib/site";
@@ -27,27 +28,20 @@ export default function Home() {
       />
       <Nav />
       <main>
-        {/* HERO */}
-        <section className="grid-dark-section py-28">
-          <div className="max-w-6xl mx-auto px-6 text-center">
-            <p className="text-xs uppercase tracking-widest text-brand-tint font-semibold mb-6">
-              AI Agent for Real Estate Professionals
-            </p>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white mb-6 leading-tight">
-              More Listings.
+        <Hero
+          badge="Apollo[Claw] Real Estate Edition"
+          title={
+            <>
+              More listings. More closings.
               <br />
-              More Closings.
-              <br />
-              Less Paperwork.
-            </h1>
-            <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
-              The Real Estate Agent handles lead follow-up, transaction coordination, and
-              client communication so you can focus on the relationships that actually
-              move the needle.
-            </p>
-            <CtaPair on="dark" />
-          </div>
-        </section>
+              Less paperwork.
+            </>
+          }
+          punch="The Real Estate Agent. More Than AI. Your Personal Operating System."
+          sub="The Real Estate Agent handles lead follow-up, transaction coordination, and client communication so you can focus on the relationships that actually move the needle. It learns your market, your pipeline, and the way you talk to clients."
+          mascot="/images/the-real-estate-agent-mascot-alt.png"
+          mascotAlt="The Real Estate Agent mascot"
+        />
 
         {/* THE ARGUMENT */}
         <section className="bg-cream py-16">
