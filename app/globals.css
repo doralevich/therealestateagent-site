@@ -312,6 +312,13 @@ h3 {
   flex: 1 1 480px;
   min-width: 0;
 }
+/* No mascot yet: centre the column so the hero does not sit lopsided. */
+.hero-row-solo {
+  justify-content: center;
+}
+.hero-row-solo .hero-copy {
+  flex: 0 1 760px;
+}
 .hero-badge {
   display: inline-flex;
   align-items: center;

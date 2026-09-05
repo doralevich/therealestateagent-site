@@ -18,13 +18,15 @@ export function Hero({
   title: React.ReactNode;
   punch: string;
   sub: string;
-  mascot: string;
-  mascotAlt: string;
+  /** Omit until a transparent cutout exists. The copy then centres and the hero still
+   *  reads correctly - better than a white JPEG box on the dark ground. */
+  mascot?: string;
+  mascotAlt?: string;
 }) {
   return (
     <section className="hero">
       <div className="hero-glow" aria-hidden="true" />
-      <div className="hero-row">
+      <div className={`hero-row${mascot ? "" : " hero-row-solo"}`}>
         <div className="hero-copy">
           <div className="hero-badge">
             <span aria-hidden="true" className="hero-badge-dot">
@@ -50,10 +52,12 @@ export function Hero({
           </div>
         </div>
 
-        <div className="hero-mascot-wrap">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={mascot} alt={mascotAlt} className="hero-mascot" />
-        </div>
+        {mascot && (
+          <div className="hero-mascot-wrap">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={mascot} alt={mascotAlt ?? ""} className="hero-mascot" />
+          </div>
+        )}
       </div>
     </section>
   );
