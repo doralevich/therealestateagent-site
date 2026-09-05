@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="google-site-verification" content="QXCJxQmdceQA01BiBdiAKvh2ZqqnmGTbLcwutaC1HfM" />
+  <title>Real Estate AI Agent | AI for Realtors &amp; Property Managers</title>
+  <meta name="description" content="The Real Estate Agent handles client follow-ups, listing inquiries, and tenant communication for real estate professionals." />
+  <meta property="og:title" content="The Real Estate Agent | AI Agent for Real Estate Professionals" />
+  <meta property="og:description" content="AI-powered real estate agent tools for listing agents, buyers agents, and brokers. Automate follow-ups, sort leads, and close more deals with Apollo Claw." />
+  <meta property="og:url" content="https://therealestateagent.ai" />
+  <meta property="og:site_name" content="The Real Estate Agent" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://therealestateagent.ai/images/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Real Estate Agent | AI Agent for Real Estate Professionals" />
+  <meta name="twitter:description" content="AI-powered real estate agent tools for listing agents, buyers agents, and brokers. Automate follow-ups, sort leads, and close more deals with Apollo Claw." />
+  <link rel="canonical" href="https://therealestateagent.ai" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "The Real Estate Agent",
+    "url": "https://therealestateagent.ai",
+    "description": "AI-powered real estate agent tools for listing agents, buyers agents, and brokers. Automate follow-ups, sort leads, and close more deals with Apollo Claw.",
+    "telephone": "(917) 363-5487",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "69 Roslyn Road",
+      "addressLocality": "Roslyn Heights",
+      "addressRegion": "NY",
+      "postalCode": "11577",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.7998,
+      "longitude": -73.651
+    },
+    "areaServed": ["Long Island", "Nassau County", "New York City Metro", "United States"],
+    "founder": {
+      "@type": "Person",
+      "name": "David Oralevich"
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Apollo Claw",
+      "url": "https://apolloclaw.ai"
+    }
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; border: 0 solid #e5e7eb; }
+    html { scroll-behavior: smooth; line-height: 1.5; -webkit-text-size-adjust: 100%; }
+    body, html { background-color: #f2f0eb; color: #1a1a1a; -webkit-font-smoothing: antialiased; line-height: 1.5em; font-family: ui-sans-serif, system-ui, sans-serif; margin: 0; }
+    blockquote, li, p { line-height: 1.5em; }
+    h1,h2,h3,h4,h5,h6 { margin: 0; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; }
+    button { cursor: pointer; font-family: inherit; background: none; }
+
+    .section-inner { max-width: 72rem; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem; }
+
+    .hero-section {
+      background-color: #f9f8f6;
+      background-image: linear-gradient(180deg, hsla(40,20%,97%,0) 60%, #f9f8f6), linear-gradient(hsla(30,21%,63%,.18) 1px, transparent 0), linear-gradient(90deg, hsla(30,21%,63%,.18) 1px, transparent 0);
+      background-size: 100% 100%, 48px 48px, 48px 48px;
+      background-position: 0 0, -1px -1px, -1px -1px;
+    }
+    .grid-dark-section {
+      background-color: #0a1628;
+      background-image: linear-gradient(hsla(0,0%,100%,.06) 1px, transparent 0), linear-gradient(90deg, hsla(0,0%,100%,.06) 1px, transparent 0);
+      background-size: 48px 48px;
+      background-position: -1px -1px;
+    }
+
+    header { position: sticky; top: 0; z-index: 50; background: #fff; border-bottom: 1px solid #e5e7eb; }
+    .nav-wrap { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 4rem; }
+    .nav-logo img { max-height: 2.5rem; width: clamp(10.5rem, 24vw, 18.75rem) !important; height: auto; }
+    nav.desktop { display: flex; align-items: center; gap: clamp(.75rem, 1.7vw, 2rem); }
+    nav.desktop a { font-size: clamp(.72rem, 1.05vw, .875rem); font-weight: 500; color: #1a1a1a; transition: color .15s; white-space: nowrap; }
+    nav.desktop a:hover { color: #D72B2B; }
+    .btn-demo { background: #D72B2B; color: #fff; padding: .5rem clamp(.6rem, 1.2vw, 1.25rem); border-radius: .25rem; font-weight: 600; font-size: clamp(.72rem, 1.05vw, .875rem); transition: background .15s; white-space: nowrap; flex: 0 0 auto; }
+    .btn-demo:hover { background: #991b1b; }
+    nav.desktop a:not(.btn-demo) { display: none; }
+    @media (min-width: 768px) { nav.desktop a:not(.btn-demo) { display: inline-flex; } .mobile-menu-btn { display: none; } }
+    .mobile-menu-btn { padding: .5rem; background: none; border: none; }
+    @media (max-width: 767px) {
+      .nav-wrap { padding: 0 .75rem; }
+      .nav-logo img { width: clamp(8rem, 34vw, 10.5rem) !important; }
+      .btn-demo { font-size: .56rem; letter-spacing: .02em; text-transform: uppercase; padding: .55rem .5rem; }
+      .mobile-menu-btn { display: none; }
+    }
+
+    .hero-label { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; color: #D72B2B; font-weight: 600; margin-bottom: 1.5rem; }
+    .hero h1 { font-size: 2.25rem; font-weight: 700; letter-spacing: -.025em; color: #fff; margin-bottom: 1.5rem; line-height: 1.25; }
+    .hero p { font-size: 1.125rem; color: #d1d5db; max-width: 56rem; margin: 0 auto 2.5rem; line-height: 1.5em; }
+    .btn-primary { display: inline-block; background: #D72B2B; color: #fff; padding: .75rem 2rem; border-radius: .25rem; font-weight: 600; font-size: 1rem; transition: background .15s; }
+    .btn-primary:hover { background: #991b1b; }
+    .btn-primary-lg { display: inline-block; background: #D72B2B; color: #fff; padding: 1rem 2.5rem; border-radius: .25rem; font-weight: 600; font-size: 1.125rem; transition: background .15s; }
+    .btn-primary-lg:hover { background: #991b1b; }
+
+    .label-sm { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 600; color: #D72B2B; margin-bottom: 1rem; }
+    .section-h2-dark { font-size: 1.875rem; font-weight: 700; color: #1a1a1a; line-height: 1.25; margin-bottom: 0; }
+    .section-h2-light { font-size: 1.875rem; font-weight: 700; color: #fff; line-height: 1.25; }
+    @media (min-width: 768px) {
+      .hero h1 { font-size: 3.75rem; }
+      .hero p { font-size: 1.25rem; }
+      .section-h2-dark { font-size: 2.25rem; }
+      .section-h2-light { font-size: 2.25rem; }
+    }
+
+    .value-body { font-size: 1.125rem; color: #1a1a1a; line-height: 1.625; max-width: 48rem; margin: 0 auto; }
+    .value-body p + p { margin-top: 1rem; }
+
+    .features-grid { display: grid; gap: 1.5rem; }
+    @media (min-width: 768px) { .features-grid { grid-template-columns: repeat(3, 1fr); } }
+    .feature-card { background: #fff; border-left: 4px solid #D72B2B; border-radius: .25rem; padding: 1.5rem; box-shadow: 0 1px 2px 0 rgba(0,0,0,.05); }
+    .feature-card h3 { font-weight: 700; font-size: 1.125rem; color: #1a1a1a; margin-bottom: .75rem; }
+    .feature-card p { color: #1a1a1a; line-height: 1.625; font-size: 1rem; }
+
+    .process-grid { display: grid; gap: 2rem; }
+    @media (min-width: 768px) { .process-grid { grid-template-columns: repeat(3, 1fr); } }
+    .process-step { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 1.5rem; }
+    .process-circle { width: 5rem; height: 5rem; border-radius: 50%; border: 2px solid #D72B2B; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 1.25rem; background-color: rgba(10,22,40,.85); flex-shrink: 0; }
+    .process-circle .phase { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 600; color: #D72B2B; }
+    .process-circle .num { font-size: 1.25rem; font-weight: 700; color: #fff; }
+    .process-step h3 { font-weight: 700; font-size: 1.125rem; color: #fff; margin-bottom: .75rem; }
+    .process-step p { font-size: .875rem; color: #9ca3af; line-height: 1.5em; }
+    .mobile-arrow { display: block; color: #D72B2B; font-size: 1.25rem; margin-bottom: 1rem; }
+    @media (min-width: 768px) { .mobile-arrow { display: none; } }
+
+    .testimonials-grid { display: grid; gap: 1.5rem; }
+    @media (min-width: 768px) { .testimonials-grid { grid-template-columns: repeat(3, 1fr); } }
+    .testimonial-card { background: #fff; border-radius: .25rem; padding: 1.5rem; box-shadow: 0 1px 2px 0 rgba(0,0,0,.05); border-top: 4px solid #D72B2B; display: flex; flex-direction: column; }
+    .testimonial-industry { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 600; color: #D72B2B; margin-bottom: .75rem; }
+    .testimonial-quote { color: #1a1a1a; font-style: italic; flex: 1; margin-bottom: 1rem; font-size: .875rem; line-height: 1.4em; }
+    .testimonial-divider { border-top: 1px solid #f3f4f6; padding-top: .75rem; }
+    .testimonial-name { font-weight: 700; color: #1a1a1a; font-size: .875rem; }
+    .testimonial-detail { font-size: .75rem; color: #9ca3af; margin-top: .25rem; }
+
+    .investment-body { font-size: 1.125rem; color: #d1d5db; margin-bottom: 2.5rem; line-height: 1.625; }
+
+    .faq-grid { display: grid; gap: 0 4rem; }
+    @media (min-width: 768px) { .faq-grid { grid-template-columns: repeat(2, 1fr); } }
+    .faq-item { border-bottom: 1px solid #f3f4f6; }
+    .faq-btn { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; text-align: left; gap: 1rem; background: none; border: none; }
+    .faq-question { font-weight: 600; color: #1a1a1a; font-size: .875rem; line-height: 1.375; }
+    .faq-icon { color: #D72B2B; font-size: 1.25rem; flex-shrink: 0; transition: transform .2s; line-height: 1; }
+    .faq-answer { display: none; padding-bottom: 1rem; font-size: .875rem; color: #4b5563; line-height: 1.625; }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    .founder-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+    .founder-img { width: 4rem; height: 4rem; border-radius: 50%; object-fit: cover; object-position: top; box-shadow: 0 1px 2px 0 rgba(0,0,0,.05); flex-shrink: 0; }
+    .founder-name { font-weight: 700; color: #1a1a1a; font-size: .875rem; }
+    .founder-title { font-size: .75rem; color: #6b7280; }
+    .about-body { color: #1a1a1a; margin-bottom: 1rem; line-height: 1.5em; }
+    .about-quote { border-left: 4px solid #D72B2B; padding-left: 1.25rem; margin-top: 2rem; }
+    .about-quote p { color: #1a1a1a; font-style: italic; font-weight: 500; line-height: 1.5em; }
+    .about-quote span { display: block; color: #D72B2B; font-size: .875rem; font-weight: 600; margin-top: .75rem; }
+
+    footer { background: #fff; border-top: 1px solid #e5e7eb; }
+    .footer-inner { max-width: 72rem; margin: 0 auto; padding: 3rem 1.5rem; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1.5rem; }
+    .footer-logo img { max-height: 2rem; width: auto; }
+    .footer-copy { font-size: .75rem; color: #9ca3af; }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VHV2KEJPYM"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VHV2KEJPYM');</script>
+  <meta name="keywords" content="AI real estate agent, AI for realtors, real estate automation, AI listing agent, AI buyers agent, Apollo Claw real estate" />
+  <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="US-NY">
+  <meta name="geo.placename" content="Roslyn Heights, NY">
+  <meta name="geo.position" content="40.7998;-73.651">
+  <meta name="ICBM" content="40.7998, -73.651">
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a class="nav-logo" href="/" aria-label="The Real Estate Agent home">
+      <img src="/images/the-real-estate-agent.png" alt="The Real Estate Agent" style="width:300px;max-height:none;" />
+    </a>
+    <nav class="desktop">
+      <a href="#how-it-works">What It Does</a>
+      <a href="#results">Client Results</a>
+      <a href="#pricing">Investment</a>
+      <a href="#faq">FAQ</a>
+      <a href="#about">About</a>
+      <a href="https://calendly.com/therealdaveo/apolloai" target="_blank" rel="noopener noreferrer" class="btn-demo">Schedule Your Consultation</a>
+    </nav>
+    <button class="mobile-menu-btn" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="grid-dark-section hero" style="padding: 7rem 0;">
+    <div class="section-inner" style="text-align: center;">
+      <p class="hero-label">AI Agent for Real Estate Professionals</p>
+      <h1>More Listings.<br>More Closings.<br>Less Paperwork.</h1>
+      <p>The Real Estate Agent handles lead follow-up, transaction coordination, and client communication so you can focus on the relationships that actually move the needle.</p>
+      <div style="display:flex;justify-content:center;">
+        <a href="https://calendly.com/therealdaveo/apolloai" target="_blank" rel="noopener noreferrer" class="btn-primary">Schedule Your Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #F2F0EB; padding: 4rem 0;">
+    <div class="section-inner" style="text-align: center;">
+      <p class="label-sm">Market Intelligence</p>
+      <h2 class="section-h2-dark" style="margin-bottom: 2rem;">Top Producers Win on Relationships. Not on How Fast They Type.</h2>
+      <div class="value-body">
+        <p>The agents who dominate their market are not the ones who work the hardest. They are the ones who stay in front of every client, follow up on every lead, and never let a deal go cold because they were too busy with another one.</p>
+        <p>The Real Estate Agent gives you that leverage. It tracks your pipeline, nurtures your leads, coordinates your transactions, and keeps every client feeling like they are your only client — without you having to manage any of it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" style="background: #fff; padding: 5rem 0;">
+    <div class="section-inner">
+      <div style="text-align:center; margin-bottom: 3rem;">
+        <p class="label-sm">What It Does</p>
+        <h2 class="section-h2-dark">A Dedicated AI Agent for Real Estate Professionals</h2>
+        <p style="font-size:1.125rem; color:#1a1a1a; margin-top:1rem; max-width:56rem; margin-left:auto; margin-right:auto;">Custom-configured for your CRM and pipeline. Trained in your voice. Running from day one.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card"><h3>Lead Nurture Sequences</h3><p>Follows up with every lead at the right cadence — new inquiries, old prospects, and past clients who haven't heard from you in a while. Nobody falls off your radar.</p></div>
+        <div class="feature-card"><h3>Transaction Coordination</h3><p>Tracks deadlines, flags upcoming contingency dates, and keeps buyers, sellers, attorneys, and lenders on the same page without you playing telephone.</p></div>
+        <div class="feature-card"><h3>Listing Intelligence</h3><p>Monitors your active listings, flags price reduction opportunities, drafts showing feedback summaries, and surfaces market data before your seller calls asking questions.</p></div>
+        <div class="feature-card"><h3>Past Client Follow-Up</h3><p>Sends anniversary messages, market updates, and check-ins that keep you top of mind with past clients. Referrals come from people who remember you.</p></div>
+        <div class="feature-card"><h3>Morning Pipeline Brief</h3><p>Delivers a daily summary before 8am — active transactions, new leads, pending deadlines, and anything that needs your attention before your first showing.</p></div>
+        <div class="feature-card"><h3>CRM Hygiene</h3><p>Updates contact records, logs communications, and keeps your database clean so you always know where every client and prospect stands in your pipeline.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid-dark-section" style="padding: 4rem 0;">
+    <div class="section-inner">
+      <div style="text-align:center; margin-bottom: 3rem;">
+        <p class="label-sm">How It Works</p>
+        <h2 class="section-h2-light">From Consultation to Running in 2 Weeks</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="process-circle"><span class="phase">Day 1</span><span class="num">01</span></div>
+          <span class="mobile-arrow">↓</span>
+          <h3>We Map Your Pipeline</h3>
+          <p>We connect your CRM, review your active transactions, and configure the agent around your market, your communication style, and your client base.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-circle"><span class="phase">Week 1</span><span class="num">02</span></div>
+          <span class="mobile-arrow">↓</span>
+          <h3>Your Agent Goes to Work</h3>
+          <p>Lead follow-ups go out automatically. Transaction deadlines get flagged. Past clients hear from you on the right schedule. Your pipeline brief arrives before your first showing.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-circle"><span class="phase">Month 1+</span><span class="num">03</span></div>
+          <h3>Your Business Compounds</h3>
+          <p>Leads you would have lost get converted. Past clients send referrals. Transactions close without drama. Most agents report measurably more capacity within 30 days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="results">
+    <section style="background: #F2F0EB; padding: 6rem 0;">
+      <div class="section-inner">
+        <div style="text-align:center; margin-bottom: 3rem;">
+          <p class="label-sm">Client Results</p>
+          <h2 class="section-h2-dark">What Real Estate Professionals Say After 30 Days</h2>
+          <p style="font-size:1.125rem; color:#1a1a1a; margin-top:1rem; max-width:56rem; margin-left:auto; margin-right:auto;">Agents and brokers across the country are closing more with less effort. Here is what changed.</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <p class="testimonial-industry">Residential Sales</p>
+            <p class="testimonial-quote">"I used to spend Sunday nights prepping for Monday. Now my brief is waiting for me at 7am — who closed, what's pending, which leads need attention. I walk into the week already knowing what matters. My clients think I got sharper. I just got better information."</p>
+            <div class="testimonial-divider"><p class="testimonial-name">Principal Broker</p><p class="testimonial-detail">Boutique residential brokerage, 30 agents, Northeast</p></div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-industry">Lead Conversion</p>
+            <p class="testimonial-quote">"I had 200 leads in my CRM that I hadn't touched in over a year. The agent sent re-engagement messages to all of them in the first week. I got 14 responses, booked 6 appointments, and relisted two properties. That's business I thought was dead."</p>
+            <div class="testimonial-divider"><p class="testimonial-name">Independent Broker-Owner</p><p class="testimonial-detail">Single-agent practice, suburban market, Mid-Atlantic</p></div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-industry">Transaction Management</p>
+            <p class="testimonial-quote">"I was managing 12 transactions at once and dropping balls. The agent now tracks every deadline and sends me a flag 72 hours before anything expires. I haven't missed a contingency date since we launched. That one feature alone saved me from losing a deal."</p>
+            <div class="testimonial-divider"><p class="testimonial-name">Top Producer, Residential Sales</p><p class="testimonial-detail">$22M volume, 2025 fiscal year</p></div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-industry">Team Operations</p>
+            <p class="testimonial-quote">"Running a team means being the last one everyone calls when something goes wrong. The agent keeps my agents informed and on-task so they stop calling me with questions I shouldn't have to answer. I got my attention back."</p>
+            <div class="testimonial-divider"><p class="testimonial-name">Team Leader, Regional Market</p><p class="testimonial-detail">8-agent team, $65M volume, Southeast</p></div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-industry">Referral Growth</p>
+            <p class="testimonial-quote">"Past clients are gold in this business. The agent sends market updates, anniversary messages, and check-ins on a schedule I never would have maintained manually. I got three referrals in the first month from people who said they hadn't heard from me in years."</p>
+            <div class="testimonial-divider"><p class="testimonial-name">Luxury Residential Specialist</p><p class="testimonial-detail">12-year producer, coastal market, West Coast</p></div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-industry">Brokerage Leadership</p>
+            <p class="testimonial-quote">"I wanted my agents to have the leverage of a full-time assistant without the cost. The Real Estate Agent gave them that. My agents are more productive, my clients are better served, and I spend less time coaching people on follow-up basics."</p>
+            <div class="testimonial-divider"><p class="testimonial-name">Broker-Owner, Multi-Office Brokerage</p><p class="testimonial-detail">45 agents, 3 offices, Midwest</p></div>
+          </div>
+        </div>
+        <p style="text-align:center; font-size:.75rem; color:#9ca3af; margin-top:2rem;">Representative client experiences. Identifying details withheld at client request.</p>
+      </div>
+    </section>
+  </div>
+
+  <section id="pricing" class="grid-dark-section" style="padding: 5rem 0;">
+    <div class="section-inner" style="text-align:center;">
+      <p class="label-sm">Investment</p>
+      <h2 class="section-h2-light" style="margin-bottom:1.5rem;">Built for Agents Who Are Serious About Volume</h2>
+      <p class="investment-body">Every Real Estate Agent deployment is custom-scoped to your CRM, transaction volume, and team size. Pricing is discussed during your consultation.</p>
+      <a href="https://calendly.com/therealdaveo/apolloai" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top:2.5rem;">Schedule Your Consultation</a>
+    </div>
+  </section>
+
+  <div id="faq">
+    <section style="background: #fff; padding: 5rem 0;">
+      <div class="section-inner">
+        <div style="text-align:center; margin-bottom:3rem;">
+          <p class="label-sm">FAQ</p>
+          <h2 class="section-h2-dark">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-grid">
+          <div>
+            <div class="faq-item">
+              <button class="faq-btn" onclick="toggleFaq(this)">
+                <span class="faq-question">What CRMs does the Real Estate Agent connect to?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">We connect to major real estate CRMs including Follow Up Boss, kvCORE, BoomTown, LionDesk, and others. We will confirm compatibility during your consultation and handle all integration work.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-btn" onclick="toggleFaq(this)">
+                <span class="faq-question">How is this different from a transaction coordinator?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">A TC manages one phase of the deal. The Real Estate Agent runs your entire business — lead nurture, pipeline management, transaction tracking, and past client follow-up — all day, every day.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-btn" onclick="toggleFaq(this)">
+                <span class="faq-question">How long does setup take?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">Most agents are fully operational within two weeks. We handle the CRM connection, configure your follow-up sequences, and train the agent on your communication style and market.</div>
+            </div>
+          </div>
+          <div>
+            <div class="faq-item">
+              <button class="faq-btn" onclick="toggleFaq(this)">
+                <span class="faq-question">Will it sound like me?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">Yes. We train the agent on your existing emails, messages, and communication style. Every outreach it sends sounds like you wrote it — because in a real sense, you did. You review and approve templates before launch.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-btn" onclick="toggleFaq(this)">
+                <span class="faq-question">Can it work with my whole team?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">Yes. We configure the agent for team workflows — routing leads to the right agents, giving the team leader oversight visibility, and managing each agent's follow-up independently.</div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-btn" onclick="toggleFaq(this)">
+                <span class="faq-question">What does it cost?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">Every engagement is custom-scoped based on your transaction volume, CRM, and team size. Book a consultation and we will give you a precise number within 48 hours.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="about">
+    <section class="hero-section" style="padding: 5rem 0;">
+      <div class="section-inner" style="max-width: 72rem;">
+        <p class="label-sm">The Story</p>
+        <h2 class="section-h2-dark" style="margin-bottom:1.5rem;">One Founder. Eighteen Years. One Unavoidable Conclusion.</h2>
+        <div class="founder-row">
+          <img src="https://theceoagent.ai/images/david-headshot.jpg" alt="David Oralevich, Founder" class="founder-img" />
+          <div>
+            <p class="founder-name">David Oralevich</p>
+            <p class="founder-title">Founder, Apollo Claw — Long Island, NY</p>
+          </div>
+        </div>
+        <p class="about-body">David Oralevich has spent his career at the edge of what is next. He rode the first wave of the internet in the late 90s, built Designs By Dave O. in 2007, and spent nearly two decades helping businesses compete and grow in a digital world.</p>
+        <p class="about-body">Then came AI. While the world was still debating ChatGPT, David was already working alongside senior engineers at leading AI startups, watching the technology develop before it hit the headlines.</p>
+        <p class="about-body">What he saw was a gap. Real estate professionals were leaving business on the table — not because of bad salesmanship, but because the follow-up process couldn't scale with one person.</p>
+        <p class="about-body">So he built it. Apollo Claw and a portfolio of industry-specific AI agents, each one purpose-built for a role. The Real Estate Agent is built on the same foundation.</p>
+        <p class="about-body" style="margin-bottom:2rem;">Every engagement is handled in-house, on Long Island, New York. No offshore teams. No outsourced builds. When you work with us, you work with us.</p>
+        <div class="about-quote">
+          <p>"Every revolution has an early chapter. The professionals who read it first write the rest of the story."</p>
+          <span>David Oralevich, Founder &amp; Chief Visionary Officer — Apollo Claw</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section id="book-demo" class="grid-dark-section" style="padding: 6rem 0; color: #fff; text-align: center;">
+    <div class="section-inner">
+      <p class="label-sm">Get Started</p>
+      <h2 style="font-size:1.875rem; font-weight:700; margin-bottom:1.5rem; line-height:1.25; color:#fff;">Ready to Close More and Work Less?</h2>
+      <p style="font-size:1.125rem; color:#e5e7eb; margin-bottom:2.5rem; line-height:1.625;">Schedule a 30-minute consultation. We will show you exactly how The Real Estate Agent would be configured for your business.</p>
+      <a href="https://calendly.com/therealdaveo/apolloai" target="_blank" rel="noopener noreferrer" class="btn-primary-lg">Schedule Your Consultation</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <a href="https://apolloclaw.ai" target="_blank" rel="noopener noreferrer">
+        <img src="/images/apolloclaw-logo.jpg" alt="Apollo Claw" style="max-height:2.5rem;width:auto;" />
+      </a>
+    </div>
+    <p class="footer-copy">© 2026 The Real Estate Agent</p>
+  </div>
+</footer>
+
+<script>
+  function toggleFaq(btn) {
+    var item = btn.parentElement;
+    item.classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>
