@@ -99,9 +99,11 @@
     .btn-primary:hover { background: #991b1b; }
     .btn-primary-lg { display: inline-block; background: #D72B2B; color: #fff; padding: 1rem 2.5rem; border-radius: .25rem; font-weight: 600; font-size: 1.125rem; transition: background .15s; }
     .btn-primary-lg:hover { background: #991b1b; }
-    .cta-pair { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
-    .btn-secondary-on-dark-lg { display: inline-block; background: transparent; color: #fff; border: 2px solid #fff; padding: 1rem 2.5rem; border-radius: .25rem; font-weight: 600; font-size: 1.125rem; transition: background .15s, color .15s; }
-    .btn-secondary-on-dark-lg:hover { background: #fff; color: #0a1628; }
+    /* Secondary CTA - pairs with .btn-primary in the hero for the two-path
+       choice (build it now / talk to us first). */
+    .cta-pair { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .btn-secondary-on-dark { display: inline-block; background: transparent; color: #fff; padding: .75rem 2rem; border: 1px solid hsla(0,0%,100%,.5); border-radius: .25rem; font-weight: 600; font-size: 1rem; transition: background .15s, border-color .15s; }
+    .btn-secondary-on-dark:hover { background: hsla(0,0%,100%,.1); border-color: #fff; }
 
     .label-sm { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 600; color: #D72B2B; margin-bottom: 1rem; }
     .section-h2-dark { font-size: 1.875rem; font-weight: 700; color: #1a1a1a; line-height: 1.25; margin-bottom: 0; }
@@ -191,7 +193,8 @@
       <a href="#pricing">Investment</a>
       <a href="#faq">FAQ</a>
       <a href="#about">About</a>
-      <a href="https://cal.com/therealdaveo/apollo-claw" target="_blank" rel="noopener noreferrer" class="btn-demo">Schedule Your Consultation</a>
+      <a href="https://cal.com/therealdaveo/apollo-claw" target="_blank" rel="noopener noreferrer">Schedule a Consultation</a>
+      <a href="https://www.apolloclaw.ai/build/real-estate" class="btn-demo">Build Your Agent</a>
     </nav>
     <button class="mobile-menu-btn" aria-label="Menu">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -206,8 +209,9 @@
       <p class="hero-label">AI Agent for Real Estate Professionals</p>
       <h1>More Listings.<br>More Closings.<br>Less Paperwork.</h1>
       <p>The Real Estate Agent handles lead follow-up, transaction coordination, and client communication so you can focus on the relationships that actually move the needle.</p>
-      <div style="display:flex;justify-content:center;">
-        <a href="https://cal.com/therealdaveo/apollo-claw" target="_blank" rel="noopener noreferrer" class="btn-primary">Schedule Your Consultation</a>
+      <div class="cta-pair">
+        <a href="https://www.apolloclaw.ai/build/real-estate" class="btn-primary">Build Your Agent</a>
+        <a href="https://cal.com/therealdaveo/apollo-claw" target="_blank" rel="noopener noreferrer" class="btn-secondary-on-dark">Schedule Your Consultation</a>
       </div>
     </div>
   </section>
@@ -411,11 +415,8 @@
     <div class="section-inner">
       <p class="label-sm">Get Started</p>
       <h2 style="font-size:1.875rem; font-weight:700; margin-bottom:1.5rem; line-height:1.25; color:#fff;">Ready to Close More and Work Less?</h2>
-      <p style="font-size:1.125rem; color:#e5e7eb; margin-bottom:2.5rem; line-height:1.625;">Build your agent now, or book a 30-minute consultation and we will show you exactly how The Real Estate Agent would be configured for your business.</p>
-      <div class="cta-pair">
-        <a href="https://www.apolloclaw.ai/build/real-estate" class="btn-primary-lg">Build Your Agent</a>
-        <a href="https://cal.com/therealdaveo/apollo-claw" target="_blank" rel="noopener noreferrer" class="btn-secondary-on-dark-lg">Schedule Your Consultation</a>
-      </div>
+      <p style="font-size:1.125rem; color:#e5e7eb; margin-bottom:2.5rem; line-height:1.625;">Schedule a 30-minute consultation. We will show you exactly how The Real Estate Agent would be configured for your business.</p>
+      <a href="https://cal.com/therealdaveo/apollo-claw" target="_blank" rel="noopener noreferrer" class="btn-primary-lg">Schedule Your Consultation</a>
     </div>
   </section>
 
