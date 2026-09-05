@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow:
-
-Sitemap: https://therealestateagent.ai/sitemap.xml
