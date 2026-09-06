@@ -11,7 +11,7 @@ export const BUILD_LINK = "https://www.apolloclaw.ai/build/real-estate";
 export const DEMO_LINK = "https://cal.com/therealdaveo/apollo-claw";
 
 export const PARENT_SITE = "https://apolloclaw.ai";
-export const CONTACT_EMAIL = "david@apolloclaw.ai";
+export const CONTACT_EMAIL = "hello@apolloclaw.ai";
 export const CONTACT_PHONE = "(917) 363-5487";
 
 export const NAV_LINKS = [
