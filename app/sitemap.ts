@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
 import { AUDIENCE_PAGES } from "@/lib/audiences";
 
-// Indexable pages only. /privacy, /terms and /thank-you are noindex and stay out.
+// Indexable pages only. /privacy and /terms are noindex and stay out.
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const paths = [
