@@ -14,7 +14,12 @@ export const metadata: Metadata = {
     "The Real Estate Agent handles lead follow-up, transaction coordination, and client communication so you can focus on the relationships that move the needle.",
   alternates: { canonical: SITE_URL },
   robots: { index: true, follow: true },
-  openGraph: { siteName: SITE_NAME, type: "website", locale: "en_US" },
+  openGraph: {
+    siteName: SITE_NAME,
+    type: "website",
+    locale: "en_US",
+    images: [{ url: `${SITE_URL}/images/og-image.png`, width: 1200, height: 630 }],
+  },
   other: {
     "geo.region": "US-NY",
     "geo.placename": "Roslyn Heights, NY",
