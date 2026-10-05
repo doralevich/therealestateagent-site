@@ -30,10 +30,10 @@ export const CAPABILITIES = [
 
 export const PROCESS = [
   {
-    phase: "Day 1",
+    phase: "15 min",
     num: "01",
-    title: "We Map Your Pipeline",
-    body: "We connect your CRM, review your active transactions, and configure the agent around your market, your communication style, and your client base.",
+    title: "You Tell It Your Pipeline",
+    body: "Connect your CRM, describe your active transactions, and set the agent around your market, your communication style, and your client base. That is the questionnaire, and your agent is built from it and running in about fifteen minutes.",
   },
   {
     phase: "Week 1",
@@ -45,7 +45,7 @@ export const PROCESS = [
     phase: "Month 1+",
     num: "03",
     title: "Your Business Compounds",
-    body: "Leads you would have lost get converted. Past clients send referrals. Transactions close without drama. Most agents report measurably more capacity within 30 days.",
+    body: "Leads that used to slip away get answered. Past clients send referrals. Transactions close on schedule, and the capacity it hands back grows every month.",
   },
 ];
 
@@ -105,7 +105,7 @@ export const FAQS = [
   },
   {
     q: "How long does setup take?",
-    a: "Most agents are fully operational within two weeks. We handle the CRM connection, configure your follow-up sequences, and train the agent on your communication style and market.",
+    a: "About fifteen minutes. The questionnaire is the configuration: your CRM, your follow-up sequences, your communication style and your market. Your agent is built from it and running as soon as you connect the CRM. Hands-on onboarding and 30 days of training are available as an add-on, and come with every custom deployment.",
   },
   {
     q: "Will it sound like me?",
